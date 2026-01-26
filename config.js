@@ -1,10 +1,10 @@
 // Update your business details here
-const PHONE_NUMBER = "919583736273"; // e.g., 91XXXXXXXXXX for India; no + or spaces
+const PHONE_NUMBER = "919589063593"; // e.g., 91XXXXXXXXXX for India; no + or spaces
 const BUSINESS_NAME = "Beauty by Akanksha";
 const DEFAULT_GREETING = "Hi! I’m interested in your services.";
 
 // Optional: phone number for "Call Now" button (include country code if needed)
-const CALL_NUMBER = "+919583736273";
+const CALL_NUMBER = "+919589063593";
 
 // Define your services
 const SERVICES = [
