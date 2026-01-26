@@ -7,6 +7,75 @@
   <meta name="description" content="Local beautician services — book via WhatsApp instantly." />
   <link rel="icon" href="./assets/logo.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ ADD THIS STYLE BLOCK -->
+  <style>
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+    @keyframes portfolio-slide {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-portfolio {
+      animation: portfolio-slide 28s linear infinite;
+    }
+
+    .portfolio-card {
+      width: 180px;
+      height: 320px; /* 9:16 ratio */
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .portfolio-card img,
+    .portfolio-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio-card span {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+    }
+  </style>
+
+
   <script>
     // Tailwind config (optional tweaks)
     tailwind.config = {
@@ -31,6 +100,11 @@
     }
   </script>
 </head>
+
+
+
+
+
 <body class="bg-rose-50 text-gray-800">
   <header class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
     <div class="flex items-center gap-3">
@@ -52,6 +126,83 @@
       </div>
     </section>
 
+
+<!-- 9:16 Auto Sliding Portfolio -->
+<section class="mt-10 overflow-hidden">
+  <div class="flex items-end justify-between mb-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-brand-900">
+      Our Bridal Portfolio
+    </h2>
+    <span class="text-sm text-gray-600">Photos & short videos</span>
+  </div>
+
+  <div class="relative overflow-hidden">
+    <div class="flex gap-6 animate-portfolio hover:[animation-play-state:paused]">
+
+      <!-- CARD 1 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal1.jpg" />
+        <span>Classic Bridal Look</span>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal2.jpg" />
+        <span>Elegant Bridal Look</span>
+      </div>
+      <!-- CARD 4 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal3.jpg" />
+        <span>Elegant Bridal Look</span>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal4.jpg" />
+        <span>Elegant Bridal Look</span>
+      </div>
+
+      <!-- CARD 1 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal5.jpg" />
+        <span>Classic Bridal Look</span>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal6.jpg" />
+        <span>Elegant Bridal Look</span>
+      </div>
+      <!-- CARD 4 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal7.jpg" />
+        <span>Elegant Bridal Look</span>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal8.jpg" />
+        <span>Elegant Bridal Look</span>
+      </div>
+
+      <!-- DUPLICATE (for infinite loop) -->
+      <div class="portfolio-card">
+        <img src="./assets/portfolio/bridal9.jpg" />
+          <span>Classic Bridal Look</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mt-6 text-center">
+    <a class="inline-block rounded-xl bg-brand-600 px-6 py-3 text-white font-semibold shadow hover:bg-brand-700 transition"
+      target="_blank"
+      href="https://wa.me/919583736273?text=Hi!%20I%20saw%20your%20bridal%20portfolio%20and%20want%20to%20book.">
+      Book Your Bridal Look on WhatsApp 💬
+    </a>
+  </div>
+</section>
+
     <section class="mt-10">
       <div class="flex items-end justify-between">
         <h2 class="text-2xl md:text-3xl font-bold text-brand-900">Popular Services</h2>
@@ -65,23 +216,104 @@
   <h2 class="text-3xl font-bold text-pink-700 mb-4" id="about-title"></h2>
   <p class="text-lg text-gray-700 max-w-3xl mx-auto whitespace-pre-line" id="about-description"></p>
 </section>
-<section id="about" class="p-6 bg-pink-50 text-center">
-  <h2 class="text-3xl font-bold text-pink-700 mb-6" id="about-title"></h2>
-  
-  <div class="flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
-    <!-- About Image -->
-    <img id="about-image" class="w-64 h-64 object-cover rounded-2xl shadow-lg" alt="About Image">
-    
-    <!-- About Text -->
-    <p class="text-lg text-gray-700 text-left whitespace-pre-line" id="about-description"></p>
+</main>
+
+<!-- About Us (PREMIUM – ONLY ONE KEPT) -->
+<section id="about" class="mt-14 bg-gradient-to-br from-rose-50 to-pink-100 py-14">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-800">
+        About Beauty by Akanksha ✨
+      </h2>
+      <p class="mt-2 text-gray-600">
+        Professional bridal & beauty services you can trust
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img
+          src="./assets/about.jpg"
+          alt="About Beauty by Akanksha"
+          class="w-72 h-72 md:w-80 md:h-80 object-cover rounded-3xl shadow-xl border-4 border-white"
+        />
+      </div>
+
+      <!-- Text -->
+      <div class="text-gray-700 leading-relaxed text-lg space-y-4">
+        <p>
+          ✨ Welcome to <span class="font-semibold text-brand-700">Beauty by Akanksha</span> —
+          where beauty meets confidence and elegance.
+        </p>
+
+        <p>
+          💄 With <span class="font-semibold">6+ years of professional experience</span>, including
+          <span class="font-semibold">3 years with Yes Madam</span>, I specialize in creating flawless
+          bridal looks and personalized beauty services.
+        </p>
+
+        <p>
+          💆‍♀️ From <span class="font-medium">bridal makeup, party looks, and hair styling</span> to
+          <span class="font-medium">facials, skincare, and pampering treatments</span>, every service
+          is delivered with premium products and attention to detail.
+        </p>
+
+        <p>
+          🌸 My goal is simple — to help every client feel
+          <span class="font-semibold text-brand-700">beautiful, confident, and radiant</span>
+          on their special day and beyond.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
-
 
   <footer class="mt-12 border-t border-rose-200">
     <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-3">
       <p class="text-sm text-gray-600">© <span id="year"></span> Beauty by Akanksha · All rights reserved</p>
-      <a class="text-sm text-brand-700 hover:underline" href="mailto:hello@example.com">hello@example.com</a>
+      <a class="text-sm text-brand-700 hover:underline" href="mailto:hello@example.com"></a>
+      <!-- Social Icons -->
+      <div class="flex items-center gap-4">
+
+        <!-- WhatsApp -->
+        <!-- <a href="https://wa.me/919583736273"
+          target="_blank"
+          title="WhatsApp"
+          class="social-icon bg-green-500">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" />
+        </a> -->
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/asmakeoverofficial?igsh=bGo4eWRidHdieTZh&utm_source=ig_contact_invite"
+          target="_blank"
+          title="Instagram"
+          class="social-icon bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" />
+        </a>
+
+        <!-- Facebook -->
+        <!-- <a href="https://www.facebook.com/YOUR_FACEBOOK"
+          target="_blank"
+          title="Facebook"
+          class="social-icon bg-blue-600">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+        </a> -->
+
+        <!-- YouTube -->
+        <a href="https://youtube.com/@miss_akki05?si=jlLlWqjOpIHVm0SF"
+          target="_blank"
+          title="YouTube"
+          class="social-icon bg-red-600">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" />
+        </a>
+
+
     </div>
   </footer>
 

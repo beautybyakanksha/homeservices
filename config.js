@@ -63,21 +63,5 @@ const PACKAGES = [
   }
 ];
 
-const ABOUT = {
-  title: "About Us",
-  description: `✨ Welcome to *Beauty by Akanksha* ✨  
-
-At Beauty by Akanksha, we believe self-care is more than a luxury — it's a way to empower yourself and feel radiant every day.  
-
-💇‍♀️ With **6 years of professional experience**, including **3 wonderful years with Yes Madam**, I have honed my skills to provide world-class beauty services and care.  
-
-💆‍♀️ From **professional hair styling and bridal makeup** to **rejuvenating facials, relaxing spa treatments, and expert skincare**, we offer a wide range of beauty services tailored just for you.  
-
-🌸 Our mission is simple: to help you look confident, feel beautiful, and glow from within.  
-
-With years of experience, premium products, and a passion for perfection, we ensure every client enjoys a **personalized, relaxing, and unforgettable beauty experience**. 💖`,
-  image: "./assets/about.jpg",
-  caption: "Professional Beautician" // 👈 Add this under the picture
-};
 
 

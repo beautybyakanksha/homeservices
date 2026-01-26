@@ -29,15 +29,6 @@ function createServiceCard(service) {
 }
 
 function render() {
-  // Year
-  document.getElementById('year').textContent = new Date().getFullYear();
-// Render About Section
-  document.getElementById("about-title").innerText = ABOUT.title;
-  document.getElementById("about-description").innerText = ABOUT.description;
-// Render About Section
-
-  document.getElementById("about-image").src = ABOUT.image;
-
 
   // Header CTA & hero WhatsApp
   const wa = waLink(PHONE_NUMBER, DEFAULT_GREETING);
@@ -61,3 +52,4 @@ function render() {
 }
 
 document.addEventListener('DOMContentLoaded', render);
+
