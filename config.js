@@ -6,12 +6,16 @@ const DEFAULT_GREETING = "Hi! I’m interested in your services.";
 // Optional: phone number for "Call Now" button (include country code if needed)
 const CALL_NUMBER = "+919589063593";
 
+
+
 // Define your services
 const SERVICES = [
-  // Hair & Makeup
-  { name: "Haircut & Styling", price: "₹799", duration: "45 min", message: "Hi! I’d like to book Haircut & Styling." },
-  { name: "Party Makeup", price: "₹1999", duration: "90 min", message: "Hi! I’m interested in Party Makeup." },
-  { name: "Bridal Makeup", price: "₹8999", duration: "3-4 hrs", message: "Hi! I’d like to book Bridal Makeup." },
+  
+  // Hair Style (Sub-services)
+  { name: "Hair Style – Pressing", price: "₹799", duration: "45 min", message: "Hi! I’d like to book Hair Pressing." },
+  { name: "Hair Style – Curl", price: "₹999", duration: "60 min", message: "Hi! I’d like to book Hair Curl styling." },
+  { name: "Hair Style – Bun / Choti", price: "₹699", duration: "45 min", message: "Hi! I’d like to book Bun / Choti hairstyle." },
+
 
   // Facials
   { name: "Facial (Glow)", price: "₹1299", duration: "60 min", message: "Hi! I’d like to book a Glow Facial." },
@@ -29,10 +33,6 @@ const SERVICES = [
   // Skincare & Body
   { name: "Bleach", price: "₹499", duration: "30 min", message: "Hi! I’d like to book a Bleach service." },
   { name: "Body Polishing", price: "₹2499", duration: "90 min", message: "Hi! I’d like to book a Body Polishing session." },
-
-  // Hair Treatments
-  { name: "Hair Curl", price: "₹1999", duration: "90 min", message: "Hi! I’d like to book Hair Curl styling." },
-  { name: "Hair Straightening", price: "₹3999", duration: "2-3 hrs", message: "Hi! I’d like to book Hair Straightening." },
 ];
 
 // Define your packages
