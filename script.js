@@ -121,3 +121,22 @@ function render() {
 // Start App
 // ==============================
 document.addEventListener('DOMContentLoaded', render);
+
+function loadFeedbacks() {
+  const container = document.getElementById("feedbackContainer");
+
+  FEEDBACKS.forEach(fb => {
+    const card = document.createElement("div");
+    card.className = "feedback-card";
+
+    card.innerHTML = `
+      <p class="feedback-text">"${fb.text}"</p>
+      <p class="feedback-rating">${fb.rating}</p>
+      <p class="feedback-name">– ${fb.name}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+loadFeedbacks();
